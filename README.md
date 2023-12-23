@@ -38,3 +38,9 @@ conda install pytorch torchvision cudatoolkit -c pytorch
 ```python
 pip install -r requirements.txt
 ```
+### 4-SOLIDER-REID
+```python
+pip install -r SOLIDER-REID/requirements.txt
+```
+```conda install -c conda-forge mmcv-full
+```
