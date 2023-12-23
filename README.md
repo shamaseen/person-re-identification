@@ -11,9 +11,9 @@ This project aims to track people in the same video and re-identify them.
 The framework used to accomplish this task relies on SMILEtrack to track and re-identify ID's of humans, respectively.
 The tracking can be completed using YOLO Nas or YOlO Nas pose and ReID relies on SOLIDER-REID.
 # # Notes
+- ***`Important`*** To get the best results you need to choose the best parameters from **`tracking`**,**`custom`**, and **`detection model`** parts.
 - I have implemented pose detection using YOLO-NAS to filter for individuals with near-complete body visibility. This is achieved by only accepting detections where at least 50% of the 17 keypoints have confidence scores exceeding 40%.
 - in the SMILEtrack part I have disabled the inside Reid.
-
 # # Installation
 ## #1 Anaconda
  - Download [Anaconda](https://www.anaconda.com/products/individual) if it is not installed on your machine
@@ -50,7 +50,7 @@ pip install -r SMILEtrack_Official/requirements.txt
 ```python
 pip install -r requirements.txt
 ```
-### 4- PyTorch 
+### 4- PyTorch
 - Install torch and torchvision based on the cuda version of your machine
 ```python
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
@@ -62,7 +62,7 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 - Download [YOLO-NAS](https://docs.deci.ai/super-gradients/latest/documentation/source/model_zoo.html#computer-vision-models-pretrained-checkpoints)
 # # Run the code
 ##  Code Params
-## ReID SOLIDER
+### ReID SOLIDER
 - --soldier-weights: Path to the SOLIDER ReID model weights file.
 - --soldier-config: Path to the SOLIDER ReID configuration file.
 - --soldier-reid-thred: Threshold for ReID matching (higher values require stricter matches).
@@ -109,4 +109,8 @@ example
 python3 main.py --soldier-weights ./SOLIDER-REID/swin_base_market.pth --soldier-config './SOLIDER-REID/configs/market/swin_base.yml' --model-name 'yolo_nas_pose_l' --model-weight 'coco_pose'
 --source './Test_video/campus4-c0.mp4'
 ```
-
+# #Acknowledgement
+This model is built on top of the following projects, thanks for their excellent work:
+- [SMILEtrack](https://github.com/WWangYuHsiang/SMILEtrack/tree/9bff163e757b2ab651f796bc1a096a9c87040818)
+- [SOLIDER-REID](https://github.com/tinyvision/SOLIDER-REID/tree/8c08e1c3255e8e1e51e006bf189e52cc57b009ed)
+- [YOLO-NAS](https://docs.deci.ai/super-gradients/latest/documentation/source/model_zoo.html#computer-vision-models-pretrained-checkpoints)
