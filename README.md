@@ -29,18 +29,21 @@ conda activate reid
 ```python
 pip install -r SMILEtrack_Official/requirements.txt
 ```
-### 2- PyTorch
-- Install torch and torchvision based on the cuda version of your machine
-```python
-conda install pytorch torchvision cudatoolkit -c pytorch
-```
-### 3-YOLO nas
+
+### 2-YOLO nas
 ```python
 pip install -r requirements.txt
 ```
-### 4-SOLIDER-REID
+### 3-SOLIDER-REID
 ```python
 pip install -r SOLIDER-REID/requirements.txt
 ```
-```conda install -c conda-forge mmcv-full
+
+```python
+conda install -c conda-forge mmcv-full
+```
+### 4- PyTorch
+- Install torch and torchvision based on the cuda version of your machine
+```python
+conda install pytorch torchvision cudatoolkit -c pytorch
 ```
