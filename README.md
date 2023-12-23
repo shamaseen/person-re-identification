@@ -2,7 +2,8 @@
 person re-identification
 
 
-https://github.com/shamaseen/person-re-identification/assets/94133296/0c53d496-26da-4a5a-b3be-3f0929ab8a1f
+https://github.com/shamaseen/person-re-identification/assets/94133296/8461f3cd-4c19-497d-959d-0bba6af4bfae
+
 
 # # Introduction
 This project aims to track people in the same video and re-identify them.
