@@ -35,7 +35,6 @@ pip install -r SMILEtrack_Official/requirements.txt
 conda install pytorch torchvision cudatoolkit -c pytorch
 ```
 ### 3-YOLO nas
-### 2- PyTorch
 ```python
 pip install -r requirements.txt
 ```
